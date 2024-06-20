@@ -6,6 +6,8 @@ import HomePage from './components/HomePage.vue';
 import AppReviews from './components/AppReviews.vue';
 import AppProducts from './components/AppProducts.vue';
 import AppFAQ from './components/AppFAQ.vue';
+import AppInfo from './components/AppInfo.vue';
+import Icons from './components/Icons.vue';
 
 export default {
 
@@ -16,6 +18,8 @@ export default {
     AppReviews,
     AppProducts,
     AppFAQ,
+    AppInfo,
+    Icons,
   }
 
 }
@@ -23,6 +27,9 @@ export default {
 </script>
 
 <template>
+
+  <!-- Include il componente delle icone -->
+  <Icons></Icons>
 
   <AppHeader></AppHeader>
 
@@ -35,6 +42,8 @@ export default {
   <AppProducts></AppProducts>
 
   <AppFAQ></AppFAQ>
+
+  <AppInfo></AppInfo>
 
 </template>
 
