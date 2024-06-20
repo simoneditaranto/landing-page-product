@@ -8,6 +8,7 @@ import AppProducts from './components/AppProducts.vue';
 import AppFAQ from './components/AppFAQ.vue';
 import AppInfo from './components/AppInfo.vue';
 import Icons from './components/Icons.vue';
+import ContactUs from './components/ContactUs.vue';
 
 export default {
 
@@ -20,6 +21,7 @@ export default {
     AppFAQ,
     AppInfo,
     Icons,
+    ContactUs,
   }
 
 }
@@ -45,6 +47,8 @@ export default {
 
   <AppInfo></AppInfo>
 
+  <ContactUs></ContactUs>
+  
 </template>
 
 <style>
