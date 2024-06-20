@@ -4,6 +4,21 @@ export default{
 
     name: 'AppHeader',
 
+    data() {
+        return {
+
+            navLinks: [
+                'Home',
+                'I punti di forza',
+                'Recensioni',
+                'Paperelle',
+                'FAQs',
+                'NewsLetter',
+            ],
+
+        }
+    }
+
 }
 
 </script>
@@ -17,9 +32,19 @@ export default{
         </div>
 
         <div class="icon-menu">
-            <div class="row first"></div>
-            <div class="row second"></div>
-            <div class="row third"></div>
+
+            <svg class="icon">
+                <use xlink:href="#navbar-icon"></use>
+            </svg>
+
+        </div>
+
+        <div class="links">
+                <ul>
+                    <li v-for="link in navLinks">
+                        {{ link }}
+                    </li>
+                </ul>
         </div>
 
     </nav>
@@ -47,31 +72,48 @@ nav {
 
     }
 
-    .icon-menu{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        gap: 4px;
+    .icon-menu {
 
-        .row {
-            height: 2px;
-
-            border-radius: 2px;
-
-            background-color: black;
+        .icon {
+            width: 30px;
+            height: 30px;
         }
 
-        .first {
-            width: 22px;
-        }
-        .second {
-            width: 15px;
-        }
-
-        .third {
-            width: 8px;
-        }
     }
+
+    .links {
+
+        ul {
+            display: flex;
+            gap: 20px;
+
+            list-style-type: none;
+
+            li {
+
+                font-size: .9em;
+
+            }
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .links {
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+
+    .icon-menu {
+        display: none;
+    }
+
 
 }
 

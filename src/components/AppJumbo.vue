@@ -77,11 +77,25 @@ export default {
 
             border: 1px solid black;
 
-            font-weight: bold;
+            // font-weight: bold;
 
             text-transform: uppercase;
         }
 
+    }
+
+}
+
+@media screen and (min-width: 769px) {
+
+    #jumbotron {
+        flex-direction: row;
+
+        .button{
+            color: white;
+
+            background-color: $myBlack;
+        }
     }
 
 }

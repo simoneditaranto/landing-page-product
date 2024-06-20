@@ -42,30 +42,35 @@ export default {
         <h2>La collezione di paperelle</h2>
 
         <p>Una paperella per ogni stile di programmazione</p>
+
+        <div class="products">
+
+            <div class="product" v-for="actualProduct in products">
+    
+                <div class="duck-thumb">
+                    <img :src="'/images/' + actualProduct.img" alt="">
+                </div>
+    
+                <div class="product-info">
+                    
+                    <div class="duck-avg">
+                        <i class="fa-solid fa-star" v-for="n in actualProduct.avg"></i>
+                    </div>
         
-        <div class="product" v-for="actualProduct in products">
-
-            <div class="duck-thumb">
-                <img :src="'/images/' + actualProduct.img" alt="">
-            </div>
-
-            <div class="product-info">
-                
-                <div class="duck-avg">
-                    <i class="fa-solid fa-star" v-for="n in actualProduct.avg"></i>
+                    <div class="duck-name">
+                        {{ actualProduct.name }}
+                    </div>
+        
+                    <div class="duck-price">
+                        ${{ actualProduct.price }}
+                    </div>
+    
                 </div>
     
-                <div class="duck-name">
-                    {{ actualProduct.name }}
-                </div>
-    
-                <div class="duck-price">
-                    ${{ actualProduct.price }}
-                </div>
-
             </div>
 
         </div>
+        
 
     </div>
 
@@ -91,43 +96,66 @@ export default {
         font-size: .8em;
     }
 
-    .product{
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
+    .products {
 
-        padding: 0 5px;
-        margin-bottom: 10px;
-
-        text-align: start;
-
-        .duck-thumb {
-
-            img{
-                width: 100%;
-            }
-
-        }
-
-        .product-info{
+        .product{
             display: flex;
             flex-direction: column;
             gap: 5px;
-            align-self: flex-start;
     
-            .duck-avg {
-                color: $avg-color;
+            padding: 0 5px;
+            margin-bottom: 10px;
+    
+            text-align: start;
+    
+            .duck-thumb {
+    
+                img{
+                    width: 100%;
+                }
+    
             }
     
-            .duck-price {
-                font-weight: bold;
+            .product-info{
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                align-self: flex-start;
+        
+                .duck-avg {
+                    color: $avg-color;
+                }
+        
+                .duck-price {
+                    font-weight: bold;
+        
+                    color: $myGreen;
+                }
     
-                color: $myGreen;
             }
-
+    
         }
 
     }
+
+
+}
+
+@media screen and (min-width: 769px) {
+
+    #our-products {
+        padding: 25px 50px;
+
+        .products {
+            display: flex;
+    
+            .product {
+                width: calc(100% / 3);
+            }
+        }
+    }
+
+
 
 }
 
