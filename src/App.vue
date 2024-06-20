@@ -9,6 +9,7 @@ import AppFAQ from './components/AppFAQ.vue';
 import AppInfo from './components/AppInfo.vue';
 import Icons from './components/Icons.vue';
 import ContactUs from './components/ContactUs.vue';
+import AppFooter from './components/AppFooter.vue';
 
 export default {
 
@@ -22,6 +23,7 @@ export default {
     AppInfo,
     Icons,
     ContactUs,
+    AppFooter,
   }
 
 }
@@ -48,6 +50,8 @@ export default {
   <AppInfo></AppInfo>
 
   <ContactUs></ContactUs>
+
+  <AppFooter></AppFooter>
   
 </template>
 
