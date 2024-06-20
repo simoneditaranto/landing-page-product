@@ -20,6 +20,18 @@ export default {
                     title: 'Design Elegante',
                     text: 'Mostra con orgoglio il design elegante e raffinato della tua paperella di gomma, disponibile in vari colori per abbinarsi al tuo stile di programmatore.',
                 },
+                {
+                    title: 'Resistenza agli Spruzzi',
+                    text: 'Perfetta per resistere ai piccoli incidenti con caffè e bevande, la tua paperella di gomma non teme schizzi, mantenedoti sempre pronto per il debugging.',
+                },
+                {
+                    title: 'Portabilità',
+                    text: 'Leggera e facile da trasportare, la paperella di gomma può essere il tuo compagno di lavoro ovunque tu vada. Portala con te per un supporto costante.',
+                },
+                {
+                    title: 'Promemoria Anti-Stress',
+                    text: 'Quando lo stress del codice diventa troppo, spremi la tua paperella per un rapido sollievo anti-stress, senza bisogno di software complicati.',
+                },
             ],
 
         }
@@ -32,9 +44,12 @@ export default {
 <template>
 
     <div class="info">
-        <div class="description" v-for="actualInfo in info">
+        <div class="description" v-for="(actualInfo, index) in info">
             <h3 class="title">{{ actualInfo.title }}</h3>
             <div class="text">{{ actualInfo.text }}</div>
+            <div class="duck-point" v-if="index == 2">
+                <!-- <img src="/images/invisible.png" alt=""> -->
+            </div>
         </div>
     </div>
 
@@ -48,6 +63,7 @@ export default {
     gap: 32px;
 
     padding: 5px;
+    margin-bottom: 20px;
 
     text-align: center;
 
@@ -56,7 +72,17 @@ export default {
         .title{
             margin-bottom: 8px;
         }
-        
+
+        .duck-point{
+            margin-top: 32px;
+
+            height: 332px;
+
+            background-image: url('/images/invisible.png');
+            background-size: cover;
+            background-position: top;
+        }
+
     }
 
 }
