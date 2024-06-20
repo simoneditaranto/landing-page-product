@@ -12,7 +12,9 @@ export default {
 
     <div id="jumbotron">
 
-        <div class="back-jumbo"></div>
+        <div class="back-jumbo">
+            <img src="/images/banner-image.png" alt="">
+        </div>
 
         <div class="jumbo-banner">
             <h1>
@@ -43,11 +45,15 @@ export default {
     margin-bottom: $margin-section;
 
     .back-jumbo{
-        height: 255px;
+        
+        img {
+            width: 100%;
+            // height: 100%;
+            // object-fit: cover;
+            // object-position: bottom;
+            display: block;
+        }
 
-        background-image: url('/images/banner-image.png');
-        background-size: cover;
-        background-position: bottom;
     }
 
     .jumbo-banner {

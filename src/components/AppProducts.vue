@@ -49,16 +49,20 @@ export default {
                 <img :src="'/images/' + actualProduct.img" alt="">
             </div>
 
-            <div class="duck-avg">
-                <i class="fa-solid fa-star" v-for="n in actualProduct.avg"></i>
-            </div>
+            <div class="product-info">
+                
+                <div class="duck-avg">
+                    <i class="fa-solid fa-star" v-for="n in actualProduct.avg"></i>
+                </div>
+    
+                <div class="duck-name">
+                    {{ actualProduct.name }}
+                </div>
+    
+                <div class="duck-price">
+                    ${{ actualProduct.price }}
+                </div>
 
-            <div class="duck-name">
-                {{ actualProduct.name }}
-            </div>
-
-            <div class="duck-price">
-                ${{ actualProduct.price }}
             </div>
 
         </div>
@@ -71,12 +75,11 @@ export default {
 @use '../styles/variables' as *;
 
 #our-products{
-
-    text-align: center;
-
-    background-color: #F8F8F8;
-
     margin-bottom: $margin-section;
+    
+    text-align: center;
+    
+    background-color: #F8F8F8;
 
     h2 {
         margin-bottom: 24px;
@@ -91,11 +94,12 @@ export default {
     .product{
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         gap: 5px;
 
         padding: 0 5px;
         margin-bottom: 10px;
+
+        text-align: start;
 
         .duck-thumb {
 
@@ -105,15 +109,24 @@ export default {
 
         }
 
-        .duck-avg {
-            color: $avg-color;
+        .product-info{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            align-self: flex-start;
+    
+            .duck-avg {
+                color: $avg-color;
+            }
+    
+            .duck-price {
+                font-weight: bold;
+    
+                color: $myGreen;
+            }
+
         }
 
-        .duck-price {
-            font-weight: bold;
-
-            color: $myGreen;
-        }
     }
 
 }

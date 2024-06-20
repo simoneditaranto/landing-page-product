@@ -48,7 +48,7 @@ export default {
             <h3 class="title">{{ actualInfo.title }}</h3>
             <div class="text">{{ actualInfo.text }}</div>
             <div class="duck-point" v-if="index == 2">
-                <!-- <img src="/images/invisible.png" alt=""> -->
+                <img src="/images/invisible.png" alt="">
             </div>
         </div>
     </div>
@@ -74,13 +74,16 @@ export default {
         }
 
         .duck-point{
+
             margin-top: 32px;
 
-            height: 332px;
+            img {
+                width: 100%;
+                // height: 100%;
+                object-fit: cover;
+                object-position: top;
+            }
 
-            background-image: url('/images/invisible.png');
-            background-size: cover;
-            background-position: top;
         }
 
     }
