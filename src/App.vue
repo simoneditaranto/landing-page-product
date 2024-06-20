@@ -4,6 +4,8 @@ import AppHeader from './components/AppHeader.vue';
 import AppJumbo from './components/AppJumbo.vue';
 import HomePage from './components/HomePage.vue';
 import AppReviews from './components/AppReviews.vue';
+import AppProducts from './components/AppProducts.vue';
+import AppFAQ from './components/AppFAQ.vue';
 
 export default {
 
@@ -12,6 +14,8 @@ export default {
     AppJumbo,
     HomePage,
     AppReviews,
+    AppProducts,
+    AppFAQ,
   }
 
 }
@@ -27,6 +31,10 @@ export default {
   <HomePage></HomePage>
 
   <AppReviews></AppReviews>
+
+  <AppProducts></AppProducts>
+
+  <AppFAQ></AppFAQ>
 
 </template>
 

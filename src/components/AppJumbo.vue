@@ -34,12 +34,13 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use '../styles/variables' as *;
 
 #jumbotron {
     display: flex;
     flex-direction: column;
 
-    margin-bottom: 20px;
+    margin-bottom: $margin-section;
 
     .back-jumbo{
         height: 255px;

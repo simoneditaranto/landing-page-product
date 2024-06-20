@@ -83,7 +83,7 @@ export default {
 
 #reviews{
 
-    margin-bottom: 20px;
+    margin-bottom: $margin-section;
 
     text-align: center;
 
@@ -102,7 +102,7 @@ export default {
         .review-avg{
             margin: 11px;
 
-            color: #FFC10A;
+            color: $avg-color;
         }
 
         .review-info{
